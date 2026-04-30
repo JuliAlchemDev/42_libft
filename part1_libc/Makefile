@@ -10,21 +10,25 @@ SRCS =  $(SRCS_DIR)ft_isalpha.c \
 		$(SRCS_DIR)ft_isdigit.c \
 		$(SRCS_DIR)ft_isalnum.c \
 		$(SRCS_DIR)ft_isascii.c \
-		$(SRCS_DIR)ft_isprint.c 
-		
+		$(SRCS_DIR)ft_isprint.c	\
+		\
+		$(SRCS_DIR)ft_toupper.c \
+		$(SRCS_DIR)ft_tolower.c \
+		$(SRCS_DIR)ft_atoi.c 
+
 OBJS = $(SRCS:$(SRCS_DIR)%.c=$(OBJS_DIR)%.o)
 
 all: $(NAME)
 
 $(OBJS_DIR)%.o: $(SRCS_DIR)%.c
 	@mkdir -p $(OBJS_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	$(CC) $(GFLAGS) $(OBJS) main.c -o $(NAME)
 
 clean: 
-	rm -f $(OBJS)
+	@rm -f $(OBJS)
 	rm -rf $(OBJS_DIR) 
 
 fclean: clean

@@ -148,6 +148,85 @@ void test_isprint(void){
     printf(SEP);
 }
 
+// TYPE CONVERSION
+
+int ft_toupper(int c);
+int ft_tolower(int c);
+int ft_atoi(const char *str);
+
+void test_toupper(void)
+{
+    printf(SEP);
+    printf(BOLD PURPLE "ft_toupper\n" RESET);
+    printf(SEP);
+
+    printf(ITALIC YELLOW "base cases\n" RESET);
+
+    check("'a'", ft_toupper('a') == toupper('a'));
+    check("'m'", ft_toupper('m') == toupper('m'));
+    check("'z'", ft_toupper('z') == toupper('z'));
+    check("'A'", ft_toupper('A') == toupper('A'));
+    check("'1'", ft_toupper('1') == toupper('1'));
+    check("'@'", ft_toupper('@') == toupper('@'));
+
+    printf(ITALIC YELLOW "edge cases\n" RESET);
+
+    check("0", ft_toupper(0) == toupper(0));
+    check("127", ft_toupper(127) == toupper(127));
+    check("-1", ft_toupper(-1) == toupper(-1));
+    check("128", ft_toupper(128) == toupper(128));
+
+    printf(SEP);
+}
+
+void test_tolower(void)
+{
+    printf(SEP);
+    printf(BOLD PURPLE "ft_tolower\n" RESET);
+    printf(SEP);
+
+    printf(ITALIC YELLOW "base cases\n" RESET);
+
+    check("'a'", ft_tolower('a') == tolower('a'));
+    check("'m'", ft_tolower('m') == tolower('m'));
+    check("'z'", ft_tolower('z') == tolower('z'));
+    check("'A'", ft_tolower('A') == tolower('A'));
+    check("'1'", ft_tolower('1') == tolower('1'));
+    check("'@'", ft_tolower('@') == tolower('@'));
+
+    printf(ITALIC YELLOW "edge cases\n" RESET);
+
+    check("0", ft_tolower(0) == tolower(0));
+    check("127", ft_tolower(127) == tolower(127));
+    check("-1", ft_tolower(-1) == tolower(-1));
+    check("128", ft_tolower(128) == tolower(128));
+
+    printf(SEP);
+}
+
+void test_atoi(void)
+{
+	printf(SEP);
+    printf(BOLD PURPLE "ft_atoi\n" RESET);
+    printf(SEP);
+
+    printf(ITALIC YELLOW "base cases\n" RESET);
+	
+	check("12345", atoi("12345") == ft_atoi("12345"));
+    check("-123", atoi("-123") == ft_atoi("-123"));
+    check("   -", atoi("   -") == ft_atoi("   -"));
+
+	printf(ITALIC YELLOW "edge cases\n" RESET);
+	
+	check("1231231231311133", atoi("1231231231311133") == ft_atoi("1231231231311133"));
+    // Explanation: The converted number is greater than 231 - 1, therefore print 231 - 1 = 2147483647. ????
+    check("-999999999999", atoi("-999999999999") == ft_atoi("-999999999999"));
+    // Explanation: The converted number is smaller than -231, therefore print -231 = -2147483648. ????
+    check("-0012gfg4", atoi("-0012gfg4") == ft_atoi("-0012gfg4"));
+
+    printf(SEP);
+}
+
 int main(void)
 {
     srand(time(NULL));
@@ -158,5 +237,8 @@ int main(void)
     test_isascii();
     test_isprint();
 
+    test_toupper();
+	test_tolower();
+	test_atoi();
     return (0);
 }
