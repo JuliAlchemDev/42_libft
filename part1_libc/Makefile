@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -Iinc
 
 NAME = tests
 
@@ -14,7 +14,18 @@ SRCS =  $(SRCS_DIR)ft_isalpha.c \
 		\
 		$(SRCS_DIR)ft_toupper.c \
 		$(SRCS_DIR)ft_tolower.c \
-		$(SRCS_DIR)ft_atoi.c 
+		$(SRCS_DIR)ft_atoi.c  \
+		\
+		$(SRCS_DIR)ft_strlen.c \
+		$(SRCS_DIR)ft_strlcpy.c \
+		$(SRCS_DIR)ft_strlcat.c \
+		$(SRCS_DIR)ft_strchr.c \
+		$(SRCS_DIR)ft_strrchr.c \
+		\
+		$(SRCS_DIR)ft_memset.c \
+		$(SRCS_DIR)ft_bzero.c \
+		$(SRCS_DIR)ft_memcpy.c  \
+# 		$(SRCS_DIR)ft_memmove.c 
 
 OBJS = $(SRCS:$(SRCS_DIR)%.c=$(OBJS_DIR)%.o)
 
@@ -25,7 +36,7 @@ $(OBJS_DIR)%.o: $(SRCS_DIR)%.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	$(CC) $(GFLAGS) $(OBJS) main.c -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) main.c -o $(NAME)
 
 clean: 
 	@rm -f $(OBJS)

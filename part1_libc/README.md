@@ -43,10 +43,22 @@ ft_toupper, ft_tolower, ft_atoi
 ft_strlen, ft_strlcpy, ft_strlcat, ft_strncmp,
 ft_strchr, ft_strrchr, ft_strnstr, ft_strdup
 
+### What I learned
+- **size_t**
+
+
 ## Block 4 - Memory Manipulation
 ### Functions
 ft_memset, ft_bzero, ft_memcpy, ft_memmove,
 ft_memchr, ft_memcmp
+### What I learned
+size_t necesita header porque es un typedef, no un tipo primitivo
+char *str = "..." es solo lectura, char str[] es modificable
+void * para genericidad, char * para operar byte a byte
+bzero es memset con valor 0 fijo
+Escribir más bytes de los reservados es buffer overflow
+
+
 
 ## Block 5 - Memory Allocation
 ### Functions
