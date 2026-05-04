@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iualkhim <iualkhim@student.42barcelona.co  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/04 12:51:59 by iualkhim          #+#    #+#             */
+/*   Updated: 2026/05/04 14:02:32 by iualkhim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 NAME
      memmove – copy byte string
@@ -15,4 +27,9 @@ RETURN VALUES
      value of dst.
 */
 
-void *ft_memmove(void *dst, const void *src, size_t len);
+#include "libft.h"
+
+void *ft_memmove(void *dst, const void *src, size_t len)
+{
+	
+}

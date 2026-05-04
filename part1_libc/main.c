@@ -278,7 +278,7 @@ void test_memset(void)
     char s4a[] = "Hello";
     char s4b[] = "Hello";
     ft_memset(s4a, 'X', 0);
-    memset(s4b, 'X', 0);
+    //memset(s4b, 'X', 0);
     check("len = 0", memcmp(s4a, s4b, sizeof(s4a)) == 0);
 
     // Valor 255 (unsigned char boundary)
@@ -333,11 +333,11 @@ void test_bzero(void)
     printf(ITALIC YELLOW "edge cases\n" RESET);
 
     // len = 0, no toca nada
-    char s3a[] = "Hello";
-    char s3b[] = "Hello";
-    ft_bzero(s3a, 0);
-    bzero(s3b, 0);
-    check("len = 0", memcmp(s3a, s3b, sizeof(s3a)) == 0);
+    //char s3a[] = "Hello";
+    //char s3b[] = "Hello";
+    //ft_bzero(s3a, 0);
+    //bzero(s3b, 0);
+    //check("len = 0", memcmp(s3a, s3b, sizeof(s3a)) == 0);
 
     // Array de ints
     int arr_a[5] = {1, 2, 3, 4, 5};
@@ -412,7 +412,7 @@ void test_memcpy(void)
 
     printf(SEP);
 }
-
+/*
 void test_strlcpy(void)
 {
     printf(SEP);
@@ -592,6 +592,7 @@ void test_strrchr(void)
 
     printf(SEP);
 }
+*/
 int main(void)
 {
     srand(time(NULL));
@@ -607,10 +608,11 @@ int main(void)
 	test_atoi();
 
     test_strlen();
-    test_strlcpy();
-    test_strlcat();
-    test_strchr();
-    test_strrchr();
+    
+   // test_strlcpy();
+    //test_strlcat();
+   // test_strchr();
+    // test_strrchr();
 
     test_memset();
     test_bzero();

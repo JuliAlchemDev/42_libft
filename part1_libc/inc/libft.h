@@ -27,8 +27,7 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t ft_strlcat(char *dst, const char *src, size_t dstsize);
 char *ft_strchr(const char *str, int c);
 char *ft_strrchr(const char *str, int c);
-// ft_strncmp 
-// ft_strnstr 
+int ft_strncmp(const char *str_1, const char *str_2, size_t n);
 // ft_strdup
 
 // ## Block 4 - Memory Manipulation

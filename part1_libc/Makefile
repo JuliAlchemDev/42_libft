@@ -21,6 +21,7 @@ SRCS =  $(SRCS_DIR)ft_isalpha.c \
 		$(SRCS_DIR)ft_strlcat.c \
 		$(SRCS_DIR)ft_strchr.c \
 		$(SRCS_DIR)ft_strrchr.c \
+		$(SRCS_DIR)ft_strncmp.c \
 		\
 		$(SRCS_DIR)ft_memset.c \
 		$(SRCS_DIR)ft_bzero.c \
