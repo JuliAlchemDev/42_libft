@@ -27,10 +27,14 @@ int ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	
-	// white spaces
+	// 	9 → \t tabulación
+	// 10 → \n salto de línea
+	// 11 → \v tabulación vertical
+	// 12 → \f salto de página
+	// 13 → \r retorno de carro
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
-	while (str[i] == '+' || str[i] == '-')
+	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
 			sign *= -1;
