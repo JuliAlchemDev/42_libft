@@ -1,7 +1,7 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <stdlib.h> // // malloc, free, size_t →
+#include <stdlib.h> // malloc, free, size_t 
 #include <unistd.h>
 #include <stdio.h>
 
@@ -40,4 +40,11 @@ void *ft_memcpy(void *dst, const void *src, size_t n);
 
 // ## Block 5 - Memory Allocation
 // ft_calloc
+
+typedef struct s_list
+{
+    void *content;
+    struct s_list *next;
+}   t_list;
+
 #endif
