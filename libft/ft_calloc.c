@@ -6,7 +6,7 @@
 /*   By: iualkhim <iualkhim@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 17:26:46 by iualkhim          #+#    #+#             */
-/*   Updated: 2026/05/19 17:31:18 by iualkhim         ###   ########.fr       */
+/*   Updated: 2026/05/27 17:48:29 by iualkhim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(memory, count * size);
 	return (memory);
 }
-

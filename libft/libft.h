@@ -6,7 +6,7 @@
 /*   By: iualkhim <iualkhim@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 09:59:57 by iualkhim          #+#    #+#             */
-/*   Updated: 2026/05/21 12:29:32 by iualkhim         ###   ########.fr       */
+/*   Updated: 2026/05/27 17:50:04 by iualkhim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h> // malloc, free, size_t
 # include <unistd.h> // write
-
 
 typedef struct s_list
 {
@@ -32,7 +31,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t n);
-void		ft_bzero(void *s, size_t n);
+void	ft_bzero(void *s, size_t n);
 
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
